@@ -38,6 +38,8 @@ public class MenuBar : MonoBehaviour
     private void Update()
     {   
         // Handle battery level
+        batteryLevel = SystemInfo.batteryLevel;
+        
         if (batBar1 != null)
         {
           if (batteryLevel == 0.0f)
@@ -95,6 +97,7 @@ public class MenuBar : MonoBehaviour
         }
 
         // Handle time
+        time = System.DateTime.UtcNow.ToLocalTime().ToString("HH:mm");
         if (timeText != null)
         {
           timeText.text = time;

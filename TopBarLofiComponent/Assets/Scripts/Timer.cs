@@ -1,4 +1,4 @@
-using System;
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +22,7 @@ public class Timer: MonoBehaviour
         string minutes = ((int)t / 60).ToString();
         float secs = (t % 60);
         string seconds = "";
-        if (Math.Round(secs) < 10) {
+        if (System.Math.Round(secs) < 10) {
           seconds += "0";
         }
         seconds += secs.ToString("f0");
